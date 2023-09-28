@@ -5,8 +5,7 @@ class SectionDetailModel {
   String? reference;
   String? content;
 
-  SectionDetailModel(this.sectionId, this.count, this.description, this.content,
-      this.reference);
+  SectionDetailModel(this.sectionId, this.count, this.description, this.content, this.reference);
 
   SectionDetailModel.fromJson(Map<String, dynamic> json) {
     sectionId = json["section_id"];
@@ -15,5 +14,4 @@ class SectionDetailModel {
     reference = json["reference"];
     content = json["content"];
   }
-
 }

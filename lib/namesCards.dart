@@ -14,8 +14,8 @@ class ZikrCard extends StatelessWidget {
     required this.press,
     required this.content,
     required this.contentCount,
-    required  this.itemIndex,
-    this.refrence,
+    required this.itemIndex,
+    this.reference,
     this.description,
   }) : super(key: key);
 
@@ -25,8 +25,9 @@ class ZikrCard extends StatelessWidget {
 //  final Product product;
   final Function() press;
   final Text content;
-  final  contentCount;
-  final Text? refrence ;
+  final contentCount;
+  final Text? reference;
+
   final Text? description;
 
   @override
@@ -34,9 +35,7 @@ class ZikrCard extends StatelessWidget {
     // It  will provide us total height and width of our screen
     Size size = MediaQuery.of(context).size;
 
-    return
-
-      Container(
+    return Container(
       key: Key(itemIndex.toString()),
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(
@@ -66,9 +65,7 @@ class ZikrCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(22),
                   color: sectionIndex!.isEven ? firstBGColor : firstBarColor,
-                  boxShadow: const [
-                    kDefaultShadow
-                  ],
+                  boxShadow: const [kDefaultShadow],
                 ),
                 child: Container(
                   width: double.infinity,
@@ -85,7 +82,8 @@ class ZikrCard extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [content!,description!,refrence!,
+                        children: [
+                          content!, description!, reference!,
 //                       Text(
 //                       refrence!,
 //                         textDirection: TextDirection.rtl,
@@ -110,8 +108,7 @@ class ZikrCard extends StatelessWidget {
 //                           ),
 //                        Spacer(),
                           Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 30.0, vertical: 5.0),
+                            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5.0),
                             decoration: BoxDecoration(
                               color: kSecondaryColor,
                               borderRadius: BorderRadius.only(
@@ -119,7 +116,8 @@ class ZikrCard extends StatelessWidget {
                                 topRight: Radius.circular(22),
                               ),
                             ),
-                            child: Text(contentCount,
+                            child: Text(
+                              contentCount,
                               style: Theme.of(context).textTheme.button,
                             ),
                           ),
@@ -137,4 +135,3 @@ class ZikrCard extends StatelessWidget {
     );
   }
 }
-

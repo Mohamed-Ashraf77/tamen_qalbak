@@ -2,7 +2,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:tamen_qalbak/screens/alasmaaAlhosna.dart';
+import 'package:tamen_qalbak/screens/alasmaa_alhosna.dart';
 import 'package:tamen_qalbak/settings.dart';
 import 'package:tamen_qalbak/tamen_qalbak.dart';
 import 'mesbaha.dart';

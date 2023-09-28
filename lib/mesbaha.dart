@@ -3,9 +3,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:tamen_qalbak/neu_button.dart';
+import 'package:liquid_progress_indicator_v2/liquid_progress_indicator.dart';
 import 'variables.dart';
-import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/services.dart';
 import 'package:confetti/confetti.dart';
@@ -133,8 +132,8 @@ class _MesbahaState extends State<Mesbaha> {
                   child: LiquidLinearProgressIndicator(
                     value: num / dropdownValue,
                     // Defaults to 0.5.
-                    valueColor: AlwaysStoppedAnimation(
-                        (num >= dropdownValue) ? Colors.pink : firstBGColor),
+                    valueColor:
+                        AlwaysStoppedAnimation((num >= dropdownValue) ? Colors.pink : firstBGColor),
                     // Defaults to the current Theme's accentColor.
                     backgroundColor: Colors.grey.shade200,
                     // Defaults to the current Theme's backgroundColor.
@@ -174,8 +173,7 @@ class _MesbahaState extends State<Mesbaha> {
                                 dropdownValue = newValue!;
                               });
                             },
-                            items: <int>[33, 100, 1000]
-                                .map<DropdownMenuItem<int>>((totalNum) {
+                            items: <int>[33, 100, 1000].map<DropdownMenuItem<int>>((totalNum) {
                               return DropdownMenuItem<int>(
                                 value: totalNum,
                                 child: Text(totalNum.toString()),
@@ -199,8 +197,7 @@ class _MesbahaState extends State<Mesbaha> {
                               color: Colors.white,
                             ),
                             elevation: 2.0,
-                            constraints: BoxConstraints.tightFor(
-                                width: 56.0, height: 56.0),
+                            constraints: BoxConstraints.tightFor(width: 56.0, height: 56.0),
                             shape: CircleBorder(),
                             fillColor: firstBarColor,
                           ),
@@ -237,8 +234,7 @@ class _MesbahaState extends State<Mesbaha> {
                       color: Colors.white,
                     ),
                     elevation: 2.0,
-                    constraints:
-                        BoxConstraints.tightFor(width: 56.0, height: 56.0),
+                    constraints: BoxConstraints.tightFor(width: 56.0, height: 56.0),
                     shape: CircleBorder(),
                     fillColor: firstBarColor,
                   ),
